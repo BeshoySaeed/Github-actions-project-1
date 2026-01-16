@@ -24,4 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Log issue event
-        run: echo "Issue event of type '${{ github.event.action }}' received for issue ${{ github.event.issue.number }} titled '${{ github.event.issue.title }}'."
+        run: |
+          echo "Issue event of type '${{ github.event.action }}' received for issue ${{ github.event.issue.number }} titled '${{ github.event.issue.title }}'."
+          echo "Issue body: ${{ github.event.issue.body }}"
+          echo "GITHUB Details ${{ github }}"
