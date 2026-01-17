@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Set output value
         id: set-output-step
-        run: echo "::set-output name=demo-output::Hello from Demo Job"
+        run: echo "set-output=Hello from Demo Job"
   build:
     runs-on: ubuntu-latest
     needs: test
